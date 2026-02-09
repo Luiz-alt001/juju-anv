@@ -20,7 +20,10 @@
         Hoje o universo comemora porque nasceu a garota mais incrível que eu já conheci.
         Você ilumina meus dias, acalma meu coração e deixa tudo mais bonito só por existir.
       </p>
-      <a class="btn" href="#mensagem">Ler minha declaração 💌</a>
+      <div class="hero-actions">
+        <a class="btn" href="#mensagem">Ler minha declaração 💌</a>
+        <a class="btn btn-outline" href="#galeria">Ver nossas fotos 📸</a>
+      </div>
     </section>
 
     <section class="countdown card">
@@ -53,23 +56,20 @@
       <p class="signature">Com todo meu amor, do seu namorado.</p>
     </section>
 
-    <section class="moments card">
-      <h2>Nossos momentos</h2>
-      <p class="hint">Adicione aqui as fotos favoritas de vocês para deixar a surpresa ainda mais perfeita.</p>
-      <div class="gallery">
-        <article>
-          <h3>Nosso sorriso</h3>
-          <p>O jeitinho que você sorri e transforma meu dia.</p>
-        </article>
-        <article>
-          <h3>Nosso abraço</h3>
-          <p>Quando o mundo para e só existe a gente.</p>
-        </article>
-        <article>
-          <h3>Nosso futuro</h3>
-          <p>Todos os sonhos lindos que ainda vamos viver juntos.</p>
-        </article>
+    <section id="galeria" class="moments card">
+      <h2>Nossas fotos favoritas 💞</h2>
+      <p class="hint">
+        Se as fotos não aparecerem automaticamente, clique em <strong>Selecionar fotos</strong>
+        e escolha as imagens que você me enviou.
+      </p>
+
+      <div class="upload-row">
+        <label for="photoPicker" class="btn">Selecionar fotos</label>
+        <input id="photoPicker" type="file" accept="image/*" multiple />
+        <small>Você também pode arrastar imagens para dentro da galeria.</small>
       </div>
+
+      <div id="gallery" class="gallery"></div>
     </section>
   </main>
 

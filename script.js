@@ -1,6 +1,9 @@
 const birthdayMonth = 7; // Agosto (0-11)
 const birthdayDay = 14; // ajuste aqui para o dia real
 
+const gallery = document.getElementById("gallery");
+const picker = document.getElementById("photoPicker");
+
 function getNextBirthdayDate() {
   const now = new Date();
   let year = now.getFullYear();
@@ -55,6 +58,58 @@ function spawnHeart() {
   setTimeout(() => heart.remove(), 10000);
 }
 
+function setEmptyState() {
+  gallery.innerHTML = `
+    <div class="empty-state">
+      <p>Suas fotos vão aparecer aqui 💕<br/>Clique em <strong>Selecionar fotos</strong> para montar a surpresa.</p>
+    </div>
+  `;
+}
+
+function addImages(files) {
+  const imageFiles = [...files].filter((file) => file.type.startsWith("image/"));
+
+  if (!imageFiles.length) {
+    setEmptyState();
+    return;
+  }
+
+  gallery.innerHTML = "";
+
+  imageFiles.forEach((file) => {
+    const card = document.createElement("div");
+    card.className = "photo-card";
+
+    const img = document.createElement("img");
+    img.src = URL.createObjectURL(file);
+    img.alt = `Foto de Julia e namorado - ${file.name}`;
+    img.loading = "lazy";
+
+    card.appendChild(img);
+    gallery.appendChild(card);
+  });
+}
+
+picker.addEventListener("change", (event) => {
+  addImages(event.target.files);
+});
+
+gallery.addEventListener("dragover", (event) => {
+  event.preventDefault();
+  gallery.classList.add("drag-over");
+});
+
+gallery.addEventListener("dragleave", () => {
+  gallery.classList.remove("drag-over");
+});
+
+gallery.addEventListener("drop", (event) => {
+  event.preventDefault();
+  gallery.classList.remove("drag-over");
+  addImages(event.dataTransfer.files);
+});
+
 updateCountdown();
+setEmptyState();
 setInterval(updateCountdown, 1000);
 setInterval(spawnHeart, 450);
