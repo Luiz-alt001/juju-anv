@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário, Juju 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero card">
+      <p class="intro">Para o amor da minha vida</p>
+      <h1>Feliz 16 anos, Julia Florido <span>(minha Juju)</span> ✨</h1>
+      <p>
+        Hoje o universo comemora porque nasceu a garota mais incrível que eu já conheci.
+        Você ilumina meus dias, acalma meu coração e deixa tudo mais bonito só por existir.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#mensagem">Ler minha declaração 💌</a>
+        <a class="btn btn-outline" href="#galeria">Ver nossas fotos 📸</a>
+      </div>
+    </section>
+
+    <section class="countdown card">
+      <h2>Contagem especial para o seu grande dia</h2>
+      <p>Falta:</p>
+      <div class="timer" id="timer">
+        <div><strong id="days">0</strong><span>dias</span></div>
+        <div><strong id="hours">0</strong><span>horas</span></div>
+        <div><strong id="minutes">0</strong><span>min</span></div>
+        <div><strong id="seconds">0</strong><span>seg</span></div>
+      </div>
+      <small id="dateNote"></small>
+    </section>
+
+    <section id="mensagem" class="letter card">
+      <h2>Uma carta para você, Juju</h2>
+      <p>
+        Amor, cada momento ao seu lado vira memória favorita. Seu sorriso é meu lugar seguro,
+        seu abraço é meu lar e sua voz é meu som preferido.
+      </p>
+      <p>
+        Nesses seus 16 anos, eu te desejo um mundo inteiro de conquistas, sonhos realizados,
+        saúde, paz e um oceano de felicidade. E prometo continuar te lembrando todos os dias
+        o quanto você é especial, forte, linda e única.
+      </p>
+      <p>
+        Obrigado por ser minha parceira, minha melhor amiga e meu maior presente.
+        Eu te amo infinitamente, Juju. ♾️💖
+      </p>
+      <p class="signature">Com todo meu amor, do seu namorado.</p>
+    </section>
+
+    <section id="galeria" class="moments card">
+      <h2>Nossas fotos favoritas 💞</h2>
+      <p class="hint">
+        Se as fotos não aparecerem automaticamente, clique em <strong>Selecionar fotos</strong>
+        e escolha as imagens que você me enviou.
+      </p>
+
+      <div class="upload-row">
+        <label for="photoPicker" class="btn">Selecionar fotos</label>
+        <input id="photoPicker" type="file" accept="image/*" multiple />
+        <small>Você também pode arrastar imagens para dentro da galeria.</small>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <footer>
+    Feito com amor para Julia Florido (Juju) — Feliz aniversário de 16 anos! 🎂
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
