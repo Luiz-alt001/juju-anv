@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Feliz Aniversário, Juju 💖</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="floating-hearts" aria-hidden="true"></div>
+
+  <main>
+    <section class="hero card">
+      <p class="intro">Para o amor da minha vida</p>
+      <h1>Feliz 16 anos, Julia Florido <span>(minha Jujuba)</span> ✨</h1>
+      <p>
+        hoje é o aniversario do maior amor da minha vida, aproveite sua surpresa.
+      </p>
+      <div class="hero-actions">
+        <a class="btn" href="#mensagem">Ler minha declaração 💌</a>
+        <a class="btn btn-outline" href="#galeria">Ver nossas fotos 📸</a>
+      </div>
+    </section>
+
+    <section class="countdown card">
+      <h2>Contagem especial para o seu grande dia</h2>
+      <p>Falta:</p>
+      <div class="timer" id="timer">
+        <div><strong id="days">0</strong><span>dias</span></div>
+        <div><strong id="hours">0</strong><span>horas</span></div>
+        <div><strong id="minutes">0</strong><span>min</span></div>
+        <div><strong id="seconds">0</strong><span>seg</span></div>
+      </div>
+      <small id="dateNote"></small>
+    </section>
+
+    <section id="mensagem" class="letter card">
+      <h2>Parabens meu amor</h2>
+      <p>
+        Amor, quero que saiba o quão especial voce é pra mim, o quão incrivel eu te acho. e o quão especial é o seu dia, pois é o dia do amor da minha vida, o dia da julia florido, o dia da garota mais linda de todo o mundo.
+      </p>
+      <p>
+        Quero desejar feliz aniversario nao so pra minha ficante premium master plus, mas pra julia em si, a garota que fez eu me viciar no seu cheirinho, a garota que
+        completa a minha alma e eu me vejo muito feliz ao lado, quero que veja o quão especial vc é, que vc continue sendo essa pessoa
+        tão inteligente e querida por todos, quando digo que és mais linda que a monalisa eu nao exagero, quando digo que tu és uma obra de arte, nao exagero, mas quando digo que eu te amo, é so uma fagulha do que realmente sinto.
+      </p>
+      <p>
+        Obrigado por todos os dias ao seu lado, eu nao sei como agradecer, so desejo que continue sendo essa menina tão incrivel e que permita eu te acompanhar nos proximos anos
+        meus parabens meu amor, eu te amo mais do que tudo.
+      </p>
+      <p class="signature">ass: Luiz.</p>
+    </section>
+
+    <section id="galeria" class="moments card">
+      <h2>Nossas fotos favoritas 💞</h2>
+      <p class="hint"></p>
+
+      <div class="upload-row">
+        <label for="photoPicker" class="btn">Selecionar fotos</label>
+        <input id="photoPicker" type="file" accept="image/*" multiple />
+        <small>Você também pode arrastar imagens para dentro da galeria.</small>
+      </div>
+
+      <div id="gallery" class="gallery"></div>
+    </section>
+  </main>
+
+  <footer>
+    Feito com amor para Julia Florido (Juju) — Feliz aniversário de 16 anos! 🎂
+  </footer>
+
+  <div id="photoModal" class="photo-modal" aria-hidden="true">
+    <button id="closeModal" class="photo-modal-close" aria-label="Fechar foto">×</button>
+    <img id="modalImage" src="" alt="Foto ampliada" />
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
