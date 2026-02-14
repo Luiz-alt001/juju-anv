@@ -1,7 +1,7 @@
-const birthdayMonth = 1; // Fevereiro (0-11)
+const birthdayMonth = 1; 
 const birthdayDay = 14;
 
-// Coloque suas fotos na pasta /fotos e liste aqui para carregar automaticamente.
+
 const preloadedImages = [
   "fotos/foto1.jpg",
   "fotos/foto2.jpg",
